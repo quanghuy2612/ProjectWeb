@@ -53,5 +53,11 @@
 </div>
 
 <script>
-
+    var url=window.location.href;
+    if(url=="http://localhost/DoAn/XoaKH/XuLyXoa")
+    {
+        setTimeout(function() {
+            window.location="http://localhost/DoAn/XoaKH";
+        }, 20);
+    }
 </script>

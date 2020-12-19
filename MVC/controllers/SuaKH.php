@@ -17,12 +17,13 @@
 
             // update mk admin/kh nhập
             $kq=$this->TaiKhoanModel->Update($username, $password);
-
+            
             // hiển thị lên đã update thành công hay chưa
             $this->view("masterLayout2", [
                 "Page"=>"suakh",
                 "Kq"=>$kq
             ]);
+          
         }
     }
 ?>

@@ -4,13 +4,14 @@
             <h2 class="form-heading">Sửa mật khẩu</h2>
 
             <div class="input__group">
-                <input type="text" name="username" placeholder="Tên tài khoản" readonly>
+                <input type="text" name="username" placeholder="Tên tài khoản">
             </div>
             <div class="input__group">
                 <input type="text" name="fullname" placeholder="Họ và tên" readonly>
             </div>
             <div class="input__group">
                 <input type="password" name="oldpassword" placeholder="Mật khẩu cũ" required>
+                <p class="confirm-old-message"></p>
             </div>
             <div class="input__group">
                 <input type="password" name="newpassword" placeholder="Mật khẩu mới" required>
@@ -41,6 +42,7 @@
 
 <script>
     var confirmInput=document.querySelector('input[name="confirmpassword"]');
+    var confirmOldInput=document.querySelector('input[name="oldpassword"]');
     confirmInput.oninput=function(e) {
         var password=document.querySelector('input[name="newpassword"]').value;
         var confirmPassword=e.target.value;
@@ -54,4 +56,17 @@
         }
         document.querySelector('p.confirm-message').style.display="block";
     }
+
+    confirmOldInput.onblur=function(e) {
+        
+    }
+
+    var url=window.location.href;
+    if(url=="http://localhost/DoAn/SuaKH/XuLySua")
+    {
+        setTimeout(function() {
+            window.location="http://localhost/DoAn/SuaKH";
+        }, 20);
+    }
+
 </script>
